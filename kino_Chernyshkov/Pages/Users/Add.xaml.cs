@@ -48,7 +48,7 @@ namespace kino_Chernyshkov.Pages.Users
         {
             DateTime DTRentStart = new DateTime();
             DateTime.TryParse(this.RentStart.Text, out DTRentStart);
-            DTRentStart = DTRentStart.Add(TimeSpan.Parse(this.RentStart.Text));
+            DTRentStart = DTRentStart.Add(TimeSpan.Parse(this.RentTime.Text));
             if (this.Users == null)
             {
                 Users = new Models.Users();

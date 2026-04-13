@@ -36,7 +36,7 @@ namespace kino_Chernyshkov.Pages.Clubs
 
         private void AddClub(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (Club != null)
+            if (Club == null)
             {
                 Club = new Models.Clubs();
                 Club.Name = this.Name.Text;

@@ -23,7 +23,7 @@ namespace kino_Chernyshkov.Pages.Users.Elements
         public ClubsContext AllClub = new ClubsContext();
         Main Main;
         Models.Users User;
-        public Item(Models.Users user, Main main)
+        public Item(Models.Users User, Main Main)
         {
             InitializeComponent();
             this.FIO.Text = User.FIO;
@@ -33,7 +33,7 @@ namespace kino_Chernyshkov.Pages.Users.Elements
             this.Club.Text=AllClub.Clubs.Where(x => x.Id == User.IdClub).First().Name;  
 
             this.User = User;
-            this.Main = main;
+            this.Main = Main;
         }
 
         private void EditUser(object sender, System.Windows.RoutedEventArgs e) =>
@@ -44,6 +44,9 @@ namespace kino_Chernyshkov.Pages.Users.Elements
             Main.AllUsers.Users.Remove(User);
             Main.AllUsers.SaveChanges();
             Main.Parent.Children.Remove(Main);
+            MainWindow.init.OpenPages(new Pages.Users.Main());
+
+
         }
     }
 }

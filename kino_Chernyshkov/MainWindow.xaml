@@ -30,6 +30,6 @@
             BorderBrush="#ff46fd00"
             Foreground="White"/>
         
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,40,0,0"/>
     </Grid>
 </Window>
