@@ -25,11 +25,17 @@ namespace kino_Chernyshkov
         {
             InitializeComponent();
             init = this;
+            OpenPages(new Pages.Clubs.Main());
         }
 
         public void OpenPages(Page page)
         {
             frame.Navigate(page);
         }
+
+        private void Clubs(object sender, RoutedEventArgs e) =>
+            OpenPages(new Pages.Clubs.Main());
+        private void Users(object sender, RoutedEventArgs e) =>
+            OpenPages(new Pages.Users.Main());
     }
 }
