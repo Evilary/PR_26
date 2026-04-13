@@ -20,9 +20,16 @@ namespace kino_Chernyshkov
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
         public MainWindow()
         {
             InitializeComponent();
+            init = this;
+        }
+
+        public void OpenPages(Page page)
+        {
+            frame.Navigate(page);
         }
     }
 }
